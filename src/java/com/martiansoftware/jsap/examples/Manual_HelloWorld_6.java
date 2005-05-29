@@ -5,7 +5,6 @@ import com.martiansoftware.jsap.JSAP;
 import com.martiansoftware.jsap.JSAPResult;
 import com.martiansoftware.jsap.Switch;
 import com.martiansoftware.jsap.UnflaggedOption;
-import com.martiansoftware.jsap.stringparsers.StringStringParser;
 
 public class Manual_HelloWorld_6 {
 
@@ -26,7 +25,7 @@ public class Manual_HelloWorld_6 {
 								.setShortFlag('n') 
 								.setLongFlag(JSAP.NO_LONGFLAG);
 								
-		opt1.setHelp("The number of times to say hello (default=1).");
+		opt1.setHelp("The number of times to say hello.");
 		jsap.registerParameter(opt1);
 		
 		Switch sw1 = new Switch("verbose")
@@ -36,7 +35,7 @@ public class Manual_HelloWorld_6 {
 		jsap.registerParameter(sw1);
 		
 		UnflaggedOption opt2 = new UnflaggedOption("name")
-								.setStringParser(StringStringParser.getParser())
+								.setStringParser(JSAP.STRING_PARSER)
 								.setDefault("World")
 								.setRequired(true)
 								.setGreedy(true);

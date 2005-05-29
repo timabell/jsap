@@ -5,7 +5,6 @@ import com.martiansoftware.jsap.JSAP;
 import com.martiansoftware.jsap.JSAPResult;
 import com.martiansoftware.jsap.Switch;
 import com.martiansoftware.jsap.UnflaggedOption;
-import com.martiansoftware.jsap.stringparsers.StringStringParser;
 
 public class Manual_HelloWorld_4 {
 
@@ -41,7 +40,7 @@ public class Manual_HelloWorld_4 {
 		// it consumes all remaining unflagged tokens on the command line
 		// as multiple values
 		UnflaggedOption opt2 = new UnflaggedOption("name")
-								.setStringParser(StringStringParser.getParser())
+								.setStringParser(JSAP.STRING_PARSER)
 								.setDefault("World")
 								.setRequired(false)
 								.setGreedy(true);

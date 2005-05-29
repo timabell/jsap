@@ -5,7 +5,6 @@ import com.martiansoftware.jsap.JSAP;
 import com.martiansoftware.jsap.JSAPResult;
 import com.martiansoftware.jsap.Switch;
 import com.martiansoftware.jsap.UnflaggedOption;
-import com.martiansoftware.jsap.stringparsers.StringStringParser;
 
 public class Manual_HelloWorld_5 {
 
@@ -35,7 +34,7 @@ public class Manual_HelloWorld_5 {
 		jsap.registerParameter(sw1);
 		
 		UnflaggedOption opt2 = new UnflaggedOption("name")
-								.setStringParser(StringStringParser.getParser())
+								.setStringParser(JSAP.STRING_PARSER)
 								.setDefault("World")
 								.setRequired(true)
 								.setGreedy(true);
