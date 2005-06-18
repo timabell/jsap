@@ -19,7 +19,7 @@ public class Manual_HelloWorld_2 {
 		// it's going to be an integer, with a default value of 1.
 		// it's required (which has no effect since there's a default value)
 		// its short flag is "n", so a command line containing "-n 5"
-		//    will our message five times.
+		//    will print our message five times.
 		// it has no long flag.
 		FlaggedOption opt1 = new FlaggedOption("count")
 								.setStringParser(JSAP.INTEGER_PARSER)
